@@ -7,6 +7,20 @@
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text">{{ product.description }}</p>
         <p class="card-text">{{ product.price + "$" }}</p>
+        <button
+          type="button"
+          (click)="removeFavorite(product.id)"
+          class="btn btn-warning"
+        >
+          Remove Favorite
+        </button>
+        <button
+          type="button"
+          (click)="addCart(product.id)"
+          class="btn btn-primary"
+        >
+          Add cart
+        </button>
       </div>
     </div>
   </div>

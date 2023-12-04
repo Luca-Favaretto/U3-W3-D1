@@ -31,4 +31,10 @@ export class ProductService {
     console.log(productToAdd);
     this.favoriteProducts.push(productToAdd);
   }
+  removeFavorite(id: number) {
+    this.favoriteProducts = this.favoriteProducts.filter(
+      (elem) => elem.id !== id
+    );
+    console.log(this.favoriteProducts);
+  }
 }
