@@ -7,7 +7,7 @@ import { Route, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
-import { CardComponent } from './components/card/card.component';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Route[] = [
@@ -21,7 +21,12 @@ const routes: Route[] = [
   },
 ];
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FavoriteComponent, CardComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FavoriteComponent,
+    NavbarComponent,
+  ],
   imports: [
     BrowserModule,
     FormsModule,

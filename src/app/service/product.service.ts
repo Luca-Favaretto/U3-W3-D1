@@ -29,7 +29,9 @@ export class ProductService {
       (product) => product.id === id
     )[0];
     console.log(productToAdd);
-    this.favoriteProducts.push(productToAdd);
+    if (this.favoriteProducts.indexOf(productToAdd) === -1) {
+      this.favoriteProducts.push(productToAdd);
+    }
   }
   removeFavorite(id: number) {
     this.favoriteProducts = this.favoriteProducts.filter(
