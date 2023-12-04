@@ -28,6 +28,7 @@
   </div>
   <div class="col-4">
     <h2>Cart</h2>
+    <p>Cart Total:{{ total }}</p>
     <div class="row">
       <div class="col-12" *ngFor="let product of cartProducts">
         <div class="card">
@@ -39,17 +40,10 @@
             <p class="card-text">{{ product.price + "$" }}</p>
             <button
               type="button"
-              (click)="addFavorite(product.id)"
+              (click)="removeCart(product.id)"
               class="btn btn-primary"
             >
-              Favorite
-            </button>
-            <button
-              type="button"
-              (click)="addCart(product.id)"
-              class="btn btn-primary"
-            >
-              Add cart
+              Remove
             </button>
           </div>
         </div>

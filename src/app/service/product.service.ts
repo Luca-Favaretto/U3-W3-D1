@@ -39,4 +39,8 @@ export class ProductService {
     );
     console.log(this.favoriteProducts);
   }
+  removeCart(id: number) {
+    this.cartProducts = this.cartProducts.filter((elem) => elem.id !== id);
+    console.log(this.cartProducts);
+  }
 }
